@@ -131,7 +131,17 @@ class Program
                 case "+": Console.WriteLine($"ededlerin cemi:{first + sec}"); break;
                 case "-": Console.WriteLine($"ededlerin ferqi:{first - sec}"); break;
                 case "*": Console.WriteLine($"ededlerin hasili:{first * sec}"); break;
-                case "/": Console.WriteLine($"ededlerin nisbeti:{first / sec}"); break;
+                case "/":
+                    if (sec != 0)
+                    {
+                        Console.WriteLine($"ededlerin nisbeti:{first / sec}");
+                    }
+                    else
+                    {
+                        Console.WriteLine(" 0 a bolmek olmaz!");
+                    }
+                    break;
+                    
 
                 default:
                     check = false;
