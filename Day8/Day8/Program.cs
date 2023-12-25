@@ -25,7 +25,7 @@ class Program
         #region Task2
 
         //Verilmiş ədədlər siyahısındaki verilmiş n ədədinin yerləşdiyi indexi tapan proqram
-        Console.Write("arrayin uzunlugunu daxil edin: ");
+        Console.Write("\narrayin uzunlugunu daxil edin: ");
         int n = Convert.ToInt32(Console.ReadLine());
         int[] arr = new int[n];
         for (int i = 0; i < arr.Length; i++)
@@ -36,20 +36,26 @@ class Program
         }
         Console.Write("axtaracaginiz ededi daxil edin: ");
         int ax = Convert.ToInt32(Console.ReadLine());
+        bool varmi = false;
         for (int i = 0; i < arr.Length; i++)
         {
             if (arr[i] == ax)
             {
                 Console.Write("axtardiginiz ededin indexi: " + i);
+                varmi = true;
                 break;
             }
 
+        }
+        if (!varmi)
+        {
+            Console.WriteLine("verilmis eded arrayda yoxdur!");
         }
         #endregion
         #region Task3
 
         // Verilmiş yazılar siyahısında verilmiş hərfdən neçə ədəd olduğunu tapan proqram
-        Console.Write("yazi siyahisinin uzunlugunu daxil edin: ");
+        Console.Write("\nyazi siyahisinin uzunlugunu daxil edin: ");
         int s = Convert.ToInt32(Console.ReadLine());
         string[] arr1 = new string[s];
         for (int i = 0; i < arr1.Length; i++)
@@ -82,7 +88,7 @@ class Program
         // Verilmiş yazının əvvəlindəki boşluqlar silinmiş bir string düzəldən proqram(Misalçün verilmiş yazı "  " +
         // " salam necesen?   " - dirsə yeni düzələcək string "salam necəsən?   " olmalıdır.
 
-        Console.Write("bir metn daxil edin: ");
+        Console.Write("\nbir metn daxil edin: ");
         string Metn = Console.ReadLine();
 
         int say = 0;
@@ -109,10 +115,10 @@ class Program
         // Verilmiş 2 ədəd üzərində verilmiş simvola uyğun əməliyyat edən proqram. Simvol +,-,*və ya / olmalıdır,
         //   əks halda simvolu yenidən daxil edilməsi istənilməlidir.(Misaçün simvol * olarsa verilmiş 2 ədəd vurulacaq və nəticəsi göstəriləcək)
 
-        Console.Write("1 ci ededi daxil edin: ");
-        int first = Convert.ToInt32(Console.ReadLine());
+        Console.Write("\n1 ci ededi daxil edin: ");
+        double first = Convert.ToDouble(Console.ReadLine());
         Console.Write("2 ci ededi daxil edin: ");
-        int sec = Convert.ToInt32(Console.ReadLine());
+        double sec = Convert.ToDouble(Console.ReadLine());
         bool check;
 
         do
